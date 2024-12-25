@@ -58,12 +58,7 @@ var RENDERER = {
 		this.fishes.push(new FISH(this));
 		this.createSurfacePoints();
 	},
-	watchWindowSize : function(){
-		this.clearTimer();
-		this.tmpWidth = this.$window.width();
-		this.tmpHeight = this.$window.height();
-		this.watchIds.push(setTimeout(this.jdugeToStopResize, this.WATCH_INTERVAL));
-	},
+
 	clearTimer : function(){
 		while(this.watchIds.length > 0){
 			clearTimeout(this.watchIds.pop());
